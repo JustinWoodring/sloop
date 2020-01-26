@@ -5,19 +5,19 @@ use std::path::Path;
 pub fn read_config(config : &str, default : bool) -> std::result::Result<(String, u32, String, String, String, u32), String>{
 	let default_text = if default { " default" } else { "" };
 	let default_file = 
-"//This is the config file for dirigible.
+"//This is the config file for sloop.
 	
 //Client Configuration
 //dirigible will look here when you only provide some arguments or just a message.
 	
 server : irc.freenode.net
 port : 6667
-nick : airship-bot
+nick : sailbot
 //FIXME: add password support, pass :
 channel : #bot-testing
 	
 //Daemon Configuration
-//dirigible will look here for settings relating to daemonizing.
+//sloop will look here for settings relating to daemonizing.
 	
 //Listening Address
 bindaddr : 127.0.0.1
