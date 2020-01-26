@@ -1,5 +1,5 @@
 [package]
-name = "dirigible"
+name = "sloop"
 version = "0.1.0"
 authors = ["Rootyjr <41842051+Rootyjr@users.noreply.github.com>"]
 edition = "2018"
