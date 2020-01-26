@@ -25,13 +25,13 @@ impl Arguments{
 		if cfg!(windows) { //Check if we are compiling for windows or linux
 			let home = std::env::var("%HOMEDRIVE%%HOMEPATH%");
 			match home{
-				Ok(home)=> {local_config = home+&"\\.dirigible.conf".to_string();}
+				Ok(home)=> {local_config = home+&"\\.sloop.conf".to_string();}
 				Err(_) => {println!("Could not find user home directory. Using current directory."); local_config = ".dirigible.conf".to_string();}
 			}
 		} else if cfg!(unix) {
 			let home = std::env::var("HOME");
 			match home{
-				Ok(home)=> {local_config = home+&"/.dirigible.conf".to_string();}
+				Ok(home)=> {local_config = home+&"/.sloop.conf".to_string();}
 				Err(_) => {println!("Could not find user home directory. Using current directory."); local_config = ".dirigible.conf".to_string();}
 			}
 		}
@@ -231,10 +231,10 @@ impl Arguments{
 fn print_help(){
 	let help = vec![
 		"HELP:",
-		"-a: Specify a plain-text password for SASL auth. [NOT AVAILABLE]", 
+		"-a: Specify a plain-text password for SASL auth. [NOT AVAILABLE YET]", 
 		"-c: Specify an alternate config file to be used.",
 		"-C: Specify the irc channel to be entered after connection.", 
-		"-d: Daemonize the session to allow the dirigible to receive HTTP post requests.",
+		"-d: Daemonize the session to allow the dirigible to receive HTTP post requests. [NOT AVAILABLE YET]",
 		"-h: Print this help.",
 		"-m: Specify the message to be sent.",
 		"-n: Specify a nickname for this bot when it connects to the irc network.",
